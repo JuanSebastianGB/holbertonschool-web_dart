@@ -27,8 +27,7 @@ int getTeamScore(Map<String, int> team) {
 int whoWins(Map<String, int> teamA, Map<String, int> teamB) {
   int scoreA = getTeamScore(teamA);
   int scoreB = getTeamScore(teamB);
-  if (scoreA < scoreB) return 2;
   if (scoreA > scoreB) return 1;
-  if (scoreA == scoreB) return 0;
-  return 5;
+  if (scoreA < scoreB) return 2;
+  return 0;
 }
