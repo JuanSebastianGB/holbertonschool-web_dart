@@ -13,7 +13,7 @@ class Password {
     return this._password;
   }
 
-  bool isValid() {
+  bool isValid(userJson) {
     return this.password.length >= 8 &&
         this.password.length <= 16 &&
         this.password.contains(RegExp(r'[A-Z]')) &&
