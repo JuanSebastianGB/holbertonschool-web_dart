@@ -13,7 +13,7 @@ class Password {
     return this._password;
   }
 
-  bool isValid(userJson) {
+  bool isValid() {
     return this.password.length >= 8 &&
         this.password.length <= 16 &&
         this.password.contains(RegExp(r'[A-Z]')) &&
@@ -23,6 +23,6 @@ class Password {
 
   @override
   String toString() {
-    return 'Your Password is: ${this.password}';
+    return 'Your Password is: ${this._password}';
   }
 }
