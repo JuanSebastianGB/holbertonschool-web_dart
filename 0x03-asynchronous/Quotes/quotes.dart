@@ -7,7 +7,7 @@ Future<String> generateQuote(id) async {
   try {
     var response = await Http.get(Uri.parse(url));
     var quote = json.decode(response.body)[0];
-    return '${quote['author']}; ${quote['quote']}';
+    return '${quote['author']} : ${quote['quote']}';
   } catch (e) {
     print('There are no quotes');
   }
